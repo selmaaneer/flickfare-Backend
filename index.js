@@ -2,7 +2,7 @@ const express = require('express')
 require('dotenv').config()
 const mongoose = require('mongoose');
 
-const cors = require('cors')
+const cors = require('cors');
 const Movie = require('./models/movie');
 const Person = require('./models/person')
 const Language = require('./models/language')
@@ -19,7 +19,7 @@ const showRoutes = require('./routes/showRoutes')
 const bookingRoutes = require('./routes/bookingRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-app.use(cors())
+app.use(cors());
 
 app.use(express.json())
 
