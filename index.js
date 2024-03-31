@@ -19,7 +19,14 @@ const showRoutes = require('./routes/showRoutes')
 const bookingRoutes = require('./routes/bookingRoutes')
 const userRoutes = require('./routes/userRoutes')
 
-app.use(cors());
+const corsConfig = {
+  origin: "*", 
+  credentials: true ,
+  methods: ["GET", "POST", "PUT", "DELETE"]
+
+};
+
+app.use(cors(corsConfig));
 
 
 app.use(express.json())
